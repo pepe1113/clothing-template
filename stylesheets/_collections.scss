@@ -1,0 +1,9 @@
+.productList-category .nav-link{
+  text-align: left;
+  &:hover{
+    background-color: $secondary;
+  }
+  @media (max-width:767px) {
+    text-align: center;
+  }
+}

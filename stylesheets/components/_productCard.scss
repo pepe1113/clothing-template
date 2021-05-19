@@ -1,0 +1,77 @@
+// productCard
+// 商品三欄式陳列，用於首頁與各商品目錄，照片會在hover時換成第二張圖片(background)
+//修改自bootstrap5 card元件
+
+.productCard{
+  text-align: center;
+  border-color: rgba(0,0,0,0);
+  .card-body{
+    padding: 0;
+    //bg-cover
+    background-size: cover;
+    background-position: center;
+    //has-secondary-img
+    img{
+      transition: opacity .3s;
+    }
+    &:hover{
+      img{
+        opacity: 0;
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .product-subtitle{
+    margin-bottom: 0;
+    margin-top: 10px;
+    a{
+      color: $info;
+      font-size: 0.5rem;
+    }
+  }
+  .product-title{
+    margin-bottom: 0;
+    a{
+      color:$primary;
+      font-size: 1rem;
+    }
+  }
+}
+
+// 修改後版本
+// 1. .card 加上 productCard
+// 2. 副標題(檔期名稱) class="product-subtitle"
+// 3. 主標題(商品名) class="product-title"
+
+// <div class="card productCard">
+//   <a href="#">
+//     <div class="card-body" style="background-image:url(#)" >
+//       <img src="#" alt="Amanda丹寧直筒褲">
+//     </div>
+//   </a>
+//   <div class="card-body">
+//     <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+//     <p class="product-title"><a href="#">Amanda丹寧直筒褲</a></p>
+//     <p>$1020</p>
+//   </div>
+// </div>
+
+
+// 原本採用card 並加上通用類別
+
+// <div class="card text-center border-0">
+//   <a href="#">
+//     <div class="card-body bg-cover has-secondary-img p-0" style="background-image:url(#)" style="max-height: 100px;">
+//       <img class="img-fluid w-100" src="#" alt="Amanda丹寧直筒褲">
+//     </div>
+//   </a>
+//   <div class="card-body">
+//     <p class="mb-0"><a href="#" class="text-info small">春夏新系列</a></p>
+//     <h4><a href="#" class="text-primary h6">Amanda丹寧直筒褲</a></h4>
+//     <p>$1020</p>
+//   </div>
+// </div>

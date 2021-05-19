@@ -1,0 +1,9 @@
+.cart{
+  &,td,th {
+    border-color: $gray-200 !important;
+  }
+  th{
+    font-weight: 100;
+  }
+  
+}

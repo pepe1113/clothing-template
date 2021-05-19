@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <title>WE AR</title>
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div class="preheader">
+      <div class="preheader container-fluid bg-secondary d-flex justify-content-end">
+        <div class="dropdown bg-white">
+          <a
+            href="#"
+            class="py-2 px-4 d-block text-dark dropdown-toggle"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            role="button"
+            aria-expanded="false"
+            >購物車(<span>1</span>)</a
+          >
+          <div class="dropdown-menu p-2" style="min-width: 300px">
+            <table class="w-100">
+              <tbody class="table">
+                <tr>
+                  <td class="me-2" style="width: 85px">
+                    <img class="img-fluid" src="images/shoppingcart-1.webp" />
+                  </td>
+                  <td>
+                    <div>春夏薄罩衫 X1</div>
+                    <div class="py-0">$890</div>
+                  </td>
+                  <td class="align-middle">
+                    <a
+                      class="text-primary"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#removeModal"
+                      data-title="春夏薄罩衫"
+                      ><i class="fas fa-trash"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="me-2" style="width: 85px">
+                    <img class="img-fluid" src="images/products-1.jpg" />
+                  </td>
+                  <td>
+                    <div>鵝黃碎花花邊衫 X1</div>
+                    <div class="py-0">$650</div>
+                  </td>
+                  <td class="align-middle">
+                    <a
+                      class="text-primary"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#removeModal"
+                      data-title="鵝黃碎花花邊衫"
+                      ><i class="fas fa-trash"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="border-top" style="height: 50px">
+                  <td class="ps-2">TOTAL</td>
+                  <td colspan="2" class="text-end">$1,540</td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <div class="d-flex mt-3">
+              <a href="shoppingcart.html" class="btn btn-primary flex-fill me-1">購物車</a>
+              <a href="checkout.html" class="btn btn-primary flex-fill ms-1">快速結帳</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="login.html" class="py-2 px-4 me-4 bg-white text-dark">登入/註冊</a>
+      </div>
+    </div>
+    <header class="sticky-md-top">
+      <div class="position-relative bg-white">
+        <h1 class="header-logo text-center pt-4">
+          <a href="index.html" class="h2 text-dark text-center">WE AR</a>
+        </h1>
+        <nav class="header-nav navbar navbar-expand-lg navbar-light bg-transparent">
+          <div class="container-fluid g-0">
+            <button
+              class="navbar-toggler border-0 ms-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center fw-normal" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="collections.html">ALL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">NEW ARRIVALS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">RANKING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">TOPS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">DRESSES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">KNITWEAR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="collections.html">SALE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <form
+          class="header-search position-relative position-absolute d-none d-md-block"
+          style="top: 30px; right: 30px"
+        >
+          <input class="form-control border-light fw-light" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn position-absolute top-0 end-0 pt-1 pb-0" type="submit">
+            <span class="material-icons">search</span>
+          </button>
+        </form>
+      </div>
+    </header>
+    <!-- main content start -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="productList-category col-md-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active text-danger" href="#productList-sale" data-bs-toggle="tab">SALE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#productList-all" data-bs-toggle="tab">ALL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productList-new" data-bs-toggle="tab">NEW ARRIVALS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productList-sale" data-bs-toggle="tab">RANKING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productList-all" data-bs-toggle="tab">TOPS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productList-new" data-bs-toggle="tab">DRESSES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productList-sale" data-bs-toggle="tab">KNITWEAR</a>
+            </li>
+          </ul>
+        </div>
+        <div class="productList-cardlist col-md-9">
+          <!-- product list tab -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="productList-all">
+              <nav aria-label="breadcrumb mb-5">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">ALL</li>
+                </ol>
+              </nav>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="products.html">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/2_d7d46511-cb07-465b-ae95-46db02dcff00_720x.jpg?v=1615975255);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/9_7de0b8e8-4775-4a55-a24c-4da8231ea3c0_720x.jpg?v=1612319401"
+                          alt="鵝黃碎花花邊衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">鵝黃碎花花邊衫</a></p>
+                      <p>$650</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/22170-4_900x.jpg?v=1615884600);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/22170-1_900x.jpg?v=1615884600"
+                          alt="100%棉質白襯衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">100%棉質白襯衫</a></p>
+                      <p>$850</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/1_cde4a390-5db9-4fa4-972a-c5775bbc929a_900x.jpg?v=1620123215);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_f6529aec-87d5-405c-a829-80948dc78601_900x.jpg?v=1620123216"
+                          alt="法式浪漫透膚罩衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏文藝復興</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">法式浪漫透膚罩衫</a></p>
+                      <p>$690</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/3_3298915f-7462-42e4-ad46-8b42ec0bb9cb_900x.jpg?v=1600159006);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_7bed896c-44d4-4989-8487-ccc674cb357b_900x.jpg?v=1600159006"
+                          alt="宮廷蕾絲珍珠領"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">宮廷蕾絲珍珠領</a></p>
+                      <p>$1150</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/2_f3804197-82bf-408b-aa5f-3e8182fe812c_900x.jpg?v=1597902395);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/3_2a0d0615-235f-456e-8161-627aec8d5f33_900x.jpg?v=1597902394"
+                          alt="Kate花邊蕾絲洋裝"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">Kate花邊蕾絲洋裝</a></p>
+                      <p>$890</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/20_82ab1da0-7f38-4d6a-8fab-690ac7b70898_900x.jpg?v=1612253855);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_b37643e3-dc59-4b62-9484-1c565aeb7c36_900x.jpg?v=1612254620"
+                          alt="Amanda丹寧直筒褲"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">Amanda丹寧直筒褲</a></p>
+                      <p>$1020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="productList-new">
+              <nav aria-label="breadcrumb mb-5">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">NEW ARRIVALS</li>
+                </ol>
+              </nav>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/2_d7d46511-cb07-465b-ae95-46db02dcff00_720x.jpg?v=1615975255);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/9_7de0b8e8-4775-4a55-a24c-4da8231ea3c0_720x.jpg?v=1612319401"
+                          alt="鵝黃碎花花邊衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">鵝黃碎花花邊衫</a></p>
+                      <p>$650</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/22170-4_900x.jpg?v=1615884600);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/22170-1_900x.jpg?v=1615884600"
+                          alt="100%棉質白襯衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">100%棉質白襯衫</a></p>
+                      <p>$850</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/1_cde4a390-5db9-4fa4-972a-c5775bbc929a_900x.jpg?v=1620123215);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_f6529aec-87d5-405c-a829-80948dc78601_900x.jpg?v=1620123216"
+                          alt="法式浪漫透膚罩衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏文藝復興</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">法式浪漫透膚罩衫</a></p>
+                      <p>$690</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/3_3298915f-7462-42e4-ad46-8b42ec0bb9cb_900x.jpg?v=1600159006);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_7bed896c-44d4-4989-8487-ccc674cb357b_900x.jpg?v=1600159006"
+                          alt="宮廷蕾絲珍珠領"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">宮廷蕾絲珍珠領</a></p>
+                      <p>$1150</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="productList-sale">
+              <nav aria-label="breadcrumb mb-5">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">SALE</li>
+                </ol>
+              </nav>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/22170-4_900x.jpg?v=1615884600);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/22170-1_900x.jpg?v=1615884600"
+                          alt="100%棉質白襯衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">100%棉質白襯衫</a></p>
+                      <p>$850</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/1_cde4a390-5db9-4fa4-972a-c5775bbc929a_900x.jpg?v=1620123215);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_f6529aec-87d5-405c-a829-80948dc78601_900x.jpg?v=1620123216"
+                          alt="法式浪漫透膚罩衫"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏文藝復興</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">法式浪漫透膚罩衫</a></p>
+                      <p>$690</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card productCard">
+                    <a href="#">
+                      <div
+                        class="card-body"
+                        style="
+                          background-image: url(https://cdn.shopify.com/s/files/1/1276/0919/products/3_3298915f-7462-42e4-ad46-8b42ec0bb9cb_900x.jpg?v=1600159006);
+                        "
+                      >
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/1276/0919/products/4_7bed896c-44d4-4989-8487-ccc674cb357b_900x.jpg?v=1600159006"
+                          alt="宮廷蕾絲珍珠領"
+                        />
+                      </div>
+                    </a>
+                    <div class="card-body">
+                      <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                      <p class="product-title"><a class="stretched-link" href="products.html">宮廷蕾絲珍珠領</a></p>
+                      <p>$1150</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main content end -->
+    <footer class="mt-5 pt-5 pb-2 bg-secondary">
+      <div class="container text-center text-md-start">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <ul class="list-unstyled">
+              <li><a href="collections.html">ALL</a></li>
+              <li><a href="collections.html">NEW ARRIVALS</a></li>
+              <li><a href="collections.html">RANKING</a></li>
+              <li><a href="collections.html">TOPS</a></li>
+              <li><a href="collections.html">DRESS</a></li>
+              <li><a href="collections.html">KNITWEAR</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="h2 mb-4">WE AR</h6>
+            <ul class="list-unstyled">
+              <li><a href="https://goo.gl/maps/X8JXKrLGx4n8yeUM7">407台中市西屯區台灣大道三段251號</a></li>
+              <li>週一到週五營業 AM9:00 ~ PM8:00</li>
+              <li><a href="tel:+886437022168">04-3702-2168</a></li>
+              <li><a href="mailto:service@we_re.example.com">service@we_re.example.com</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="mb-4">CONTACT</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"><i class="fab fa-facebook-square me-2"></i>Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter me-2"></i>Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram me-2"></i>Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="small text-center mt-5">Copyright © 2021 WANG PEIHSIN Powered by Bootstrap5</p>
+      </div>
+    </footer>
+    <!-- remove Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title" id="removeModalLabel">刪除鵝黃碎花花邊衫</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>確定刪除商品 <span class="text-primary" id="modal-body-productTitle">鵝黃碎花花邊衫</span> 嗎？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary flex-fill me-1" data-bs-dismiss="modal">否</button>
+            <button type="button" class="btn btn-primary flex-fill">是</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
+    <title>WE AR</title>
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div class="preheader">
+      <div class="preheader container-fluid bg-secondary d-flex justify-content-end">
+        <div class="dropdown  bg-white">
+          <a href="#" class="py-2 px-4 d-block text-dark dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" role="button" aria-expanded="false">購物車(<span>1</span>)</a>
+          <div class="dropdown-menu p-2" style="min-width: 300px;">
+            <table class="w-100">
+              <tbody class="table">
+                <tr>
+                  <td class="me-2" style="width: 85px;">
+                    <img class="img-fluid"  src="images/shoppingcart-1.webp">
+                  </td>
+                  <td>
+                    <div>春夏薄罩衫 X1</div>
+                    <div class="py-0">$890</div>
+                  </td>
+                  <td class="align-middle">
+                    <a class="text-primary" href="#" data-bs-toggle="modal" data-bs-target="#removeModal"
+                    data-title="春夏薄罩衫"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="me-2" style="width: 85px;">
+                    <img class="img-fluid"  src="images/products-1.jpg">
+                  </td>
+                  <td>
+                    <div>鵝黃碎花花邊衫 X1</div>
+                    <div class="py-0">$650</div>
+                  </td>
+                  <td class="align-middle">
+                    <a class="text-primary" href="#" data-bs-toggle="modal" data-bs-target="#removeModal"
+                    data-title="鵝黃碎花花邊衫"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot >
+                <tr class="border-top" style="height: 50px;">
+                  <td class="ps-2">TOTAL</td>
+                  <td colspan="2" class="text-end">$1,540</td>
+                </tr>
+              </tfoot>
+            </table>
+            
+            <div class="d-flex mt-3">
+              <a href="shoppingcart.html" class="btn btn-primary flex-fill me-1">購物車</a>
+              <a href="checkout.html" class="btn btn-primary flex-fill ms-1" >快速結帳</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="login.html" class="py-2 px-4 me-4 bg-white text-dark">登入/註冊</a>
+      </div>
+    </div>
+    <header class="sticky-md-top">
+      <div class="position-relative bg-white">
+        <h1 class="header-logo text-center pt-4">
+          <a href="index.html" class="h2 text-dark text-center">WE AR</a>
+        </h1>
+        <nav class="header-nav navbar navbar-expand-lg navbar-light bg-transparent">
+          <div class="container-fluid g-0">
+            <button
+              class="navbar-toggler border-0 ms-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center fw-normal" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="collections.html">ALL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">NEW ARRIVALS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">RANKING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">TOPS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">DRESSES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="collections.html">KNITWEAR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-danger" href="collections.html">SALE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <form class="header-search position-relative position-absolute d-none d-md-block" style="top: 30px; right: 30px">
+          <input class="form-control border-light fw-light" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn position-absolute top-0 end-0 pt-1 pb-0" type="submit">
+            <span class="material-icons">search</span>
+          </button>
+        </form>
+      </div>
+    </header>
+    <!-- main content start -->
+    <div class="banner container-lg container-fluid my-2 g-0 overflow-hidden">
+      <div class="row g-2">
+        <div class="col-12">
+          <div
+            class="card text-light bg-cover border-0"
+            style="
+              background-image: url(images/home-banner-1.jpg);background-position: 50% 30%;
+            "
+          >
+            <div class="card-body mx-3 mx-lg-5 d-flex flex-column justify-content-center">
+              <h5 class="card-title display-4">Heirloom Classics</h5>
+              <p class="card-text h5 fw-light mb-5">春夏新作上市</p>
+              <a href="#" class="btn btn-outline-light py-2 rounded-0 btn-sm" style="width: 200px">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="overflow-hidden">
+            <a
+              href="#"
+              class="d-block bg-hover bg-cover position-relative"
+              style="
+                background-image: url(images/home-banner-2.jpg);
+                height: 350px;
+              "
+            >
+              <div class="bg-hover-text text-center position-absolute">
+                <h2 class="fw-light">NEW ARRIVAL</h2>
+                <p>美好新生活提案，春夏新品上市</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="overflow-hidden">
+            <a
+              href="#"
+              class="d-block bg-hover bg-cover position-relative"
+              style="
+                background-image: url(images/home-banner-3.jpg);
+                height: 350px;
+              "
+            >
+              <div class="bg-hover-text text-center position-absolute">
+                <h2 class="h3 fw-light">SPRING LOOKBOOK</h2>
+                <p class="mb-1">春季系列形象影片</p>
+                <p class="mb-0"><span class="h1 material-icons md-48">play_circle_filled</span></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-text container my-7 text-center">
+      <h3 class="fw-light h4 mb-3">More simple, More Details</h2>
+      <p class="small">
+        In 2015, a group of girls with different cultural backgrounds met in New York City. <br>The love of vintage clothes
+        connected them and sparked an idea to create a brand they wanted to wear themselves. This is how the brand
+        WE RE began.
+      </p>
+    </div>
+
+    <div class="productList container">
+      <div class="row row-cols-md-2 row-cols-lg-3 g-5">
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body" style="background-image:url(images/clothes1-2.jpg)" >
+                <img src="images/clothes1-1.jpg" alt="鵝黃碎花花邊衫">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+              <p class="product-title"><a href="#" >鵝黃碎花花邊衫</a></p>
+              <p>$650</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body" style="background-image:url(images/clothes2-2.jpg)" >
+                <img src="images/clothes2-1.jpg" alt="100%棉質白襯衫">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+              <p class="product-title"><a href="#" >100%棉質白襯衫</a></p>
+              <p >$850</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body " style="background-image:url(images/clothes3-2.jpg)" >
+                <img src="images/clothes3-1.jpg" alt="法式浪漫透膚罩衫">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#" >春夏文藝復興</a></p>
+              <p class="product-title"><a href="#" >法式浪漫透膚罩衫</a></p>
+              <p>$690</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body" style="background-image:url(images/clothes4-2.jpg)" >
+                <img src="images/clothes4-1.jpg" alt="宮廷蕾絲珍珠領">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+              <p class="product-title"><a href="#">宮廷蕾絲珍珠領</a></p>
+              <p>$1150</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body" style="background-image:url(images/clothes5-2.jpg)">
+                <img src="images/clothes5-1.jpg" alt="Kate花邊蕾絲洋裝">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+              <p class="product-title"><a href="#" >Kate花邊蕾絲洋裝</a></p>
+              <p>$890</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card productCard">
+            <a href="#">
+              <div class="card-body" style="background-image:url(images/clothes6-2.jpg)" >
+                <img src="images/clothes6-1.jpg" alt="Amanda丹寧直筒褲">
+              </div>
+            </a>
+            <div class="card-body">
+              <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+              <p class="product-title"><a href="#">Amanda丹寧直筒褲</a></p>
+              <p>$1020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-productList container-fluid d-md-none">
+      <div class="swiper-container mobileProductList">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes1-2.jpg)" >
+                  <img src="images/clothes1-1.jpg" alt="鵝黃碎花花邊衫">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+                <p class="product-title"><a href="#">鵝黃碎花花邊衫</a></p>
+                <p>$650</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes2-2.jpg)" >
+                  <img src="images/clothes2-1.jpg" alt="100%棉質白襯衫">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                <p class="product-title"><a href="#" >100%棉質白襯衫</a></p>
+                <p>$850</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes3-2.jpg)" >
+                  <img src="images/clothes3-1.jpg" alt="宮廷蕾絲珍珠領">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                <p class="product-title"><a href="#">宮廷蕾絲珍珠領</a></p>
+                <p>$1150</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes4-2.jpg)" >
+                  <img src="images/clothes4-1.jpg" alt="Kate花邊蕾絲洋裝">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#">春夏新系列</a></p>
+                <p class="product-title"><a href="#">Kate花邊蕾絲洋裝</a></p>
+                <p>$890</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes5-2.jpg)" >
+                  <img src="images/clothes5-1.jpg" alt="Amanda丹寧直筒褲">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#" >春夏新系列</a></p>
+                <p class="product-title"><a href="#">Amanda丹寧直筒褲</a></p>
+                <p>$1020</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card productCard">
+              <a href="#">
+                <div class="card-body" style="background-image:url(images/clothes6-2.jpg)" >
+                  <img src="images/clothes6-2.jpg" alt="法式浪漫透膚罩衫">
+                </div>
+              </a>
+              <div class="card-body">
+                <p class="product-subtitle"><a href="#" >春夏文藝復興</a></p>
+                <p class="product-title"><a href="#">法式浪漫透膚罩衫</a></p>
+                <p>$690</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="container  my-5">
+      <h3 class="h6 fw-light lh-lg mx-auto w-75 text-center text-hover">
+        越簡單，越穿得出細節是是我們重要的品牌理念，重視衣服的細節，善待生活的小事。<br>期待 WE AR 讓您的日常豐富而有趣。<br>WE AR 打造極簡日常衣著，中性復古風格、簡約中藏有趣味細節。
+      </h3>
+    </div>
+
+    <div class="event-banner container-fluid my-4 g-0">
+      <div class="bg-cover my-5  position-relative" style="background-image: url(https://images.unsplash.com/photo-1620890186094-1f3caf481295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1901&q=80);min-height: 30vw;">
+        <div class="bg-white bg-md-transparent text-md-light p-4  position-md-absolute" style="top: 10%; left: 5%;">
+          <h4 class="display-6">Summer sale 50% off!</h4>
+          <p class="h5 fw-light">搶購夏季狂潮</p>
+          <a href="#" class="btn btn-primary fw-light mt-2 mt-md-4 px-4">BUY NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscribe container">
+      <div class="card mb-3 text-center" >
+        <div class="row g-0">
+          <div class="col-md-5">
+            <div class="bg-cover h-100" style="background-image: url(https://images.unsplash.com/photo-1512909481869-0eaa1e9817ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);min-height:300px;"></div>
+          </div>
+          <div class="col-md-7">
+            <div class="card-body p-5 d-flex flex-column justify-content-center h-100">
+              <h5 class="card-title h4 fw-light">SUBSCRIBE US</h5>
+              <p class="card-text lh-lg mt-4">輸入電子信箱，立即訂閱會員專屬通知！<br>商品最新資訊，還送你一張首購 <mark>9折</mark> 優惠卷！<br>Our newsletter is a mix of style tips, trends and company culture. Subscribers are also the first to hear about giveaways.</p>
+              <div class="input-group">
+                <input class="form-control" type="email" name="email" id="subscribeInput" placeholder="Email">
+                <button class="btn btn-primary" type="button" id="subscribeBtn" placeholder="電子郵件">送出</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main content end -->
+    <footer class="mt-5 pt-5 pb-2 bg-secondary">
+      <div class="container text-center text-md-start">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <ul class="list-unstyled">
+              <li><a href="collections.html">ALL</a></li>
+              <li><a href="collections.html">NEW ARRIVALS</a></li>
+              <li><a href="collections.html">RANKING</a></li>
+              <li><a href="collections.html">TOPS</a></li>
+              <li><a href="collections.html">DRESS</a></li>
+              <li><a href="collections.html">KNITWEAR</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="h2 mb-4">WE AR</h6>
+            <ul class="list-unstyled">
+              <li><a href="https://goo.gl/maps/X8JXKrLGx4n8yeUM7">407台中市西屯區台灣大道三段251號</a></li>
+              <li>週一到週五營業  AM9:00 ~ PM8:00</li>
+              <li><a href="tel:+886437022168">04-3702-2168</a></li>
+              <li><a href="mailto:service@we_re.example.com">service@we_re.example.com</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="mb-4">CONTACT</h6>
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fab fa-facebook-square me-2"></i>Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="small text-center mt-5">Copyright © 2021 WANG PEIHSIN  
+          Powered by Bootstrap5
+        </p>
+      </div>
+    </footer>
+    <!-- remove Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title" id="removeModalLabel">刪除鵝黃碎花花邊衫</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>確定刪除商品 <span class="text-primary" id="modal-body-productTitle">鵝黃碎花花邊衫</span> 嗎？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary flex-fill me-1" data-bs-dismiss="modal">否</button>
+            <button type="button" class="btn btn-primary flex-fill" >是</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>
