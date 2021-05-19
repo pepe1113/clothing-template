@@ -23,49 +23,69 @@
   <body>
     <div class="preheader">
       <div class="preheader container-fluid bg-secondary d-flex justify-content-end">
-        <div class="dropdown  bg-white">
-          <a href="#" class="py-2 px-4 d-block text-dark dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" role="button" aria-expanded="false">購物車(<span>1</span>)</a>
-          <div class="dropdown-menu p-2" style="min-width: 300px;">
+        <div class="dropdown bg-white">
+          <a
+            href="#"
+            class="py-2 px-4 d-block text-dark dropdown-toggle"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            role="button"
+            aria-expanded="false"
+            >購物車(<span>1</span>)</a
+          >
+          <div class="dropdown-menu p-2" style="min-width: 300px">
             <table class="w-100">
               <tbody class="table">
                 <tr>
-                  <td class="me-2" style="width: 85px;">
-                    <img class="img-fluid"  src="images/shoppingcart-1.webp">
+                  <td class="me-2" style="width: 85px">
+                    <img class="img-fluid" src="images/shoppingcart-1.webp" />
                   </td>
                   <td>
                     <div>春夏薄罩衫 X1</div>
                     <div class="py-0">$890</div>
                   </td>
                   <td class="align-middle">
-                    <a class="text-primary" href="#" data-bs-toggle="modal" data-bs-target="#removeModal"
-                    data-title="春夏薄罩衫"><i class="fas fa-trash"></i></a>
+                    <a
+                      class="text-primary"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#removeModal"
+                      data-title="春夏薄罩衫"
+                      ><i class="fas fa-trash"></i
+                    ></a>
                   </td>
                 </tr>
                 <tr>
-                  <td class="me-2" style="width: 85px;">
-                    <img class="img-fluid"  src="images/products-1.jpg">
+                  <td class="me-2" style="width: 85px">
+                    <img class="img-fluid" src="images/products-1.jpg" />
                   </td>
                   <td>
                     <div>鵝黃碎花花邊衫 X1</div>
                     <div class="py-0">$650</div>
                   </td>
                   <td class="align-middle">
-                    <a class="text-primary" href="#" data-bs-toggle="modal" data-bs-target="#removeModal"
-                    data-title="鵝黃碎花花邊衫"><i class="fas fa-trash"></i></a>
+                    <a
+                      class="text-primary"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#removeModal"
+                      data-title="鵝黃碎花花邊衫"
+                      ><i class="fas fa-trash"></i
+                    ></a>
                   </td>
                 </tr>
               </tbody>
-              <tfoot >
-                <tr class="border-top" style="height: 50px;">
+              <tfoot>
+                <tr class="border-top" style="height: 50px">
                   <td class="ps-2">TOTAL</td>
                   <td colspan="2" class="text-end">$1,540</td>
                 </tr>
               </tfoot>
             </table>
-            
+
             <div class="d-flex mt-3">
               <a href="shoppingcart.html" class="btn btn-primary flex-fill me-1">購物車</a>
-              <a href="checkout.html" class="btn btn-primary flex-fill ms-1" >快速結帳</a>
+              <a href="checkout.html" class="btn btn-primary flex-fill ms-1">快速結帳</a>
             </div>
           </div>
         </div>
@@ -118,7 +138,10 @@
             </div>
           </div>
         </nav>
-        <form class="header-search position-relative position-absolute d-none d-md-block" style="top: 30px; right: 30px">
+        <form
+          class="header-search position-relative position-absolute d-none d-md-block"
+          style="top: 30px; right: 30px"
+        >
           <input class="form-control border-light fw-light" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn position-absolute top-0 end-0 pt-1 pb-0" type="submit">
             <span class="material-icons">search</span>
@@ -199,72 +222,86 @@
         </div>
       </div>
 
-      <form class="my-4">
+      <form class="my-4 needs-validation" novalidate>
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">配送區域</label>
           <div class="col-sm-10">
-            <select name="deliveryArea" id="deliveryArea" class="form-select">
+            <select name="deliveryArea" id="deliveryArea" class="form-select" required>
+              <option selected disabled value="">請選擇</option>
               <option value="taiwan">台灣</option>
               <option value="japan">日本</option>
               <option value="korea">韓國</option>
             </select>
+            <div class="invalid-feedback">必填項目</div>
           </div>
         </div>
         <div class="row mb-3">
           <label for="payway" class="col-sm-2 col-form-label">付款方式</label>
           <div class="col-sm-10">
-            <select name="payway" id="payway" class="form-select">
+            <select name="payway" id="payway" class="form-select" required>
+              <option selected disabled value="">請選擇</option>
               <option value="pickUpPay">超商取貨付款</option>
               <option value="creditCard">信用卡刷卡</option>
               <option value="onlineAtm">線上ATM</option>
             </select>
+            <div class="invalid-feedback">必填項目</div>
           </div>
         </div>
         <div class="row mb-5">
           <label for="shippingMethod" class="col-sm-2 col-form-label">運送方式</label>
           <div class="col-sm-10">
-            <select name="shippingMethod" id="shippingMethod" class="form-select">
+            <select name="shippingMethod" id="shippingMethod" class="form-select" required>
+              <option selected disabled value="">請選擇</option>
               <option value="home">宅配</option>
               <option value="711">7-11</option>
             </select>
+            <div class="invalid-feedback">必填項目</div>
           </div>
         </div>
         <hr />
         <div class="row g-3 my-4">
           <div class="col-md-6">
             <label for="name" class="form-label">收件人姓名</label>
-            <input type="text" class="form-control" id="deliveryName" />
+            <input type="text" class="form-control" id="deliveryName" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-6">
             <label for="telphone" class="form-label">手機電話</label>
-            <input type="tel" class="form-control" id="inputPassword4" placeholder="輸入格式：0912-345678" />
+            <input type="tel" class="form-control" id="inputPassword4" placeholder="輸入格式：0912-345678" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-12">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="email" />
+            <input type="email" class="form-control" id="email" placeholder="email" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-12">
             <label for="inputAddress2" class="form-label">縣市</label>
-            <input type="text" class="form-control" id="inputAddress2" />
+            <input type="text" class="form-control" id="inputAddress2" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-2">
             <label for="inputZip" class="form-label">郵遞區號</label>
-            <input type="number" class="form-control" id="inputZip" />
+            <input type="number" class="form-control" id="inputZip" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-2">
             <label for="inputCity" class="form-label">縣市</label>
-            <input type="text" class="form-control" id="inputCity" />
+            <input type="text" class="form-control" id="inputCity" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">區</label>
-            <select id="inputState" class="form-select">
-              <option selected>請選擇區</option>
+            <select id="inputState" class="form-select" required>
+              <option selected disabled value="">請選擇</option>
               <option>...</option>
             </select>
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-4">
             <label for="inputZip" class="form-label">巷/路名/樓層</label>
-            <input type="text" class="form-control" id="inputZip" />
+            <input type="text" class="form-control" id="inputZip" required />
+            <div class="invalid-feedback">必填項目</div>
           </div>
           <ul class="col-12 col-md-4 ms-auto mt-md-5">
             <li class="d-flex justify-content-between">
@@ -286,7 +323,7 @@
           </ul>
 
           <div class="col-12">
-            <div class="form-check">
+            <div class="form-check text-dark">
               <input class="form-check-input" type="checkbox" id="gridCheck" />
               <label class="form-check-label" for="gridCheck">
                 我已閱讀並明瞭<a href="#">「網站使用條款」</a>、<a href="#">「隱私權政策」</a>、<a href="#"
@@ -296,11 +333,11 @@
             </div>
           </div>
         </div>
+        <div class="col-12 text-center">
+          <a href="index.html" class="btn btn-primary btn-lg px-5 me-3">繼續購物</a>
+          <button type="submit" class="btn btn-primary btn-lg px-5">送出訂單</button>
+        </div>
       </form>
-      <div class="col-12 text-center">
-        <a href="index.html" class="btn btn-primary btn-lg px-5 me-3">繼續購物</a>
-        <button type="submit" class="btn btn-primary btn-lg px-5">送出訂單</button>
-      </div>
     </div>
 
     <!-- main content end -->
