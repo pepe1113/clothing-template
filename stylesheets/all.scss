@@ -32,3 +32,12 @@ a{
     opacity: .6;
   }
 }
+
+.was-validated {
+  .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+    color: #000;
+  }
+  .form-check-input:valid:checked, .form-check-input.is-valid:checked {
+    background-color: $primary; 
+  }
+}
