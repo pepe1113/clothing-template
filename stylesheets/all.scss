@@ -35,9 +35,23 @@ a{
 
 .was-validated {
   .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
-    color: #000;
+    color: $dark;
   }
   .form-check-input:valid:checked, .form-check-input.is-valid:checked {
     background-color: $primary; 
+  }
+}
+
+.preheader{
+  .dropdown{
+    @media (max-width:450px) {
+      position: static;
+    }
+  }
+  .dropdown-menu{
+    @media (max-width:450px) {
+      left: 0 !important;
+      right: 0 !important;
+    }
   }
 }

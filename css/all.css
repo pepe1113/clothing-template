@@ -11563,4 +11563,17 @@ a {
 .was-validated .form-check-input:valid:checked, .was-validated .form-check-input.is-valid:checked {
   background-color: #6e776b;
 }
+
+@media (max-width: 450px) {
+  .preheader .dropdown {
+    position: static;
+  }
+}
+
+@media (max-width: 450px) {
+  .preheader .dropdown-menu {
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
 /*# sourceMappingURL=all.css.map */

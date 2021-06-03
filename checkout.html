@@ -224,7 +224,7 @@
 
       <form class="my-4 needs-validation" novalidate>
         <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">配送區域</label>
+          <label for="deliveryArea" class="col-sm-2 col-form-label">配送區域</label>
           <div class="col-sm-10">
             <select name="deliveryArea" id="deliveryArea" class="form-select" required>
               <option selected disabled value="">請選擇</option>
@@ -261,46 +261,45 @@
         <hr />
         <div class="row g-3 my-4">
           <div class="col-md-6">
-            <label for="name" class="form-label">收件人姓名</label>
-            <input type="text" class="form-control" id="deliveryName" required />
+            <label for="checkout-name" class="form-label">收件人姓名</label>
+            <input type="text" class="form-control" id="checkout-name" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-6">
-            <label for="telphone" class="form-label">手機電話</label>
-            <input type="tel" class="form-control" id="inputPassword4" placeholder="輸入格式：0912-345678" required />
+            <label for="checkout-phone" class="form-label">手機電話</label>
+            <input type="tel" class="form-control" id="checkout-phone" placeholder="輸入格式：0912-345678" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-12">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="email" required />
+            <label for="checkout-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="checkout-email" placeholder="example@test.com" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-12">
-            <label for="inputAddress2" class="form-label">縣市</label>
-            <input type="text" class="form-control" id="inputAddress2" required />
+            <label for="checkout-memo" class="form-label">特別備註</label>
+            <input type="text" class="form-control" id="checkout-memo" />
+          </div>
+          <div class="col-md-2">
+            <label for="checkout-zip" class="form-label">郵遞區號</label>
+            <input type="number" class="form-control" id="checkout-zip" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-2">
-            <label for="inputZip" class="form-label">郵遞區號</label>
-            <input type="number" class="form-control" id="inputZip" required />
-            <div class="invalid-feedback">必填項目</div>
-          </div>
-          <div class="col-md-2">
-            <label for="inputCity" class="form-label">縣市</label>
-            <input type="text" class="form-control" id="inputCity" required />
+            <label for="checkout-address1" class="form-label">縣市</label>
+            <input type="text" class="form-control" id="checkout-address1" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-4">
-            <label for="inputState" class="form-label">區</label>
-            <select id="inputState" class="form-select" required>
+            <label for="checkout-address2" class="form-label">區</label>
+            <select id="checkout-address2" class="form-select" required>
               <option selected disabled value="">請選擇</option>
               <option>...</option>
             </select>
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-4">
-            <label for="inputZip" class="form-label">巷/路名/樓層</label>
-            <input type="text" class="form-control" id="inputZip" required />
+            <label for="checkout-address3" class="form-label">巷/路名/樓層</label>
+            <input type="text" class="form-control" id="checkout-address3" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <ul class="col-12 col-md-4 ms-auto mt-md-5">
