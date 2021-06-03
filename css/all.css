@@ -11507,12 +11507,12 @@ footer a {
 }
 
 .hover-dark a:hover {
-  color: #000 !important;
+  color: #212529 !important;
 }
 
 form a:hover {
   text-decoration: underline !important;
-  color: #000;
+  color: #212529;
 }
 
 .cart, .cart td, .cart th {
@@ -11557,7 +11557,7 @@ a {
 }
 
 .was-validated .form-check-input:valid ~ .form-check-label, .was-validated .form-check-input.is-valid ~ .form-check-label {
-  color: #000;
+  color: #212529;
 }
 
 .was-validated .form-check-input:valid:checked, .was-validated .form-check-input.is-valid:checked {
@@ -11575,5 +11575,19 @@ a {
     left: 0 !important;
     right: 0 !important;
   }
+}
+
+.animated {
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.fadeIn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 /*# sourceMappingURL=all.css.map */

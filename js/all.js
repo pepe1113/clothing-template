@@ -66,6 +66,7 @@ removeModal.addEventListener('show.bs.modal', function (e) {
 
 //slick slider
 $(document).ready(function () {
+  //slick slider
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -82,5 +83,17 @@ $(document).ready(function () {
     centerMode: true,
     focusOnSelect: true,
     vertical: true,
+  })
+
+  $(window).scroll(function () {
+    let scrollTop = $(window).scrollTop()
+    let windowHeight = $(window).height()
+
+    $('.animated').each(function () {
+      let thisPos = $(this).offset().top
+      if (thisPos <= scrollTop + windowHeight) {
+        $(this).addClass('fadeIn')
+      }
+    })
   })
 })
