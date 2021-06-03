@@ -12,6 +12,8 @@
 - [登入](https://pepe1113.github.io/clothing-template/login)
 - [註冊](https://pepe1113.github.io/clothing-template/signup)
 
+![image](https://github.com/pepe1113/clothing-template/blob/main/clothing-peek.gif?raw=true)
+
 ## 參考資料
 
 - Bootstrap5 [https://getbootstrap.com/docs/5.0/getting-started/introduction/](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
