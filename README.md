@@ -2,7 +2,7 @@
 
 ## 內容
 
-假想服飾電商網頁，架構有採用bootstrap5
+假想服飾電商網頁，架構採用bootstrap5
 
 - [首頁](https://pepe1113.github.io/clothing-template/)
 - [商品總覽](https://pepe1113.github.io/clothing-template/collections)
