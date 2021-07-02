@@ -1,6 +1,6 @@
 # Clothing E-commerce Template 服裝品牌電商
 
-DEMO [WE AR](https://pepe1113.github.io/clothing-template/)
+DEMO [WE AR](https://clothing-ec-template.netlify.app/)
 
 ![image](https://github.com/pepe1113/clothing-template/blob/main/clothing-peek.gif?raw=true)
 
@@ -10,13 +10,13 @@ DEMO [WE AR](https://pepe1113.github.io/clothing-template/)
 
 全部頁面：
 
-- [首頁](https://pepe1113.github.io/clothing-template/)
-- [商品總覽](https://pepe1113.github.io/clothing-template/collections)
-- [商品頁](https://pepe1113.github.io/clothing-template/products)
-- [購物車](https://pepe1113.github.io/clothing-template/shoppingcart)
-- [結帳頁](https://pepe1113.github.io/clothing-template/checkout)
-- [登入](https://pepe1113.github.io/clothing-template/login)
-- [註冊](https://pepe1113.github.io/clothing-template/signup)
+- [首頁](https://clothing-ec-template.netlify.app)
+- [商品總覽](https://clothing-ec-template.netlify.app/collections.html)
+- [商品頁](https://clothing-ec-template.netlify.app/products.html)
+- [購物車](https://clothing-ec-template.netlify.app/shoppingcart.html)
+- [結帳頁](https://clothing-ec-template.netlify.app/checkout.html)
+- [登入](https://clothing-ec-template.netlify.app/login.html)
+- [註冊](https://clothing-ec-template.netlify.app/signup.html)
 
 ## Libraries & Referance
 
