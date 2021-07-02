@@ -11590,4 +11590,9 @@ a {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
+
+.loading {
+  margin: 50px auto;
+  width: 150px;
+}
 /*# sourceMappingURL=all.css.map */
