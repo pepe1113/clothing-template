@@ -1,6 +1,6 @@
 # Clothing E-commerce Template 服裝品牌電商
 
-DEMO [WE AR](https://clothing-ec-template.netlify.app/)
+## DEMO [WE AR](https://clothing-ec-template.netlify.app/)
 
 ![image](https://github.com/pepe1113/clothing-template/blob/main/clothing-peek.gif?raw=true)
 
