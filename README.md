@@ -1,6 +1,8 @@
 # Clothing E-commerce Template 服裝品牌電商
 
-DEMO: [WE AR](https://pepe1113.github.io/clothing-template/)
+DEMO [WE AR](https://pepe1113.github.io/clothing-template/)
+
+![image](https://github.com/pepe1113/clothing-template/blob/main/clothing-peek.gif?raw=true)
 
 ## Content
 
@@ -15,8 +17,6 @@ DEMO: [WE AR](https://pepe1113.github.io/clothing-template/)
 - [結帳頁](https://pepe1113.github.io/clothing-template/checkout)
 - [登入](https://pepe1113.github.io/clothing-template/login)
 - [註冊](https://pepe1113.github.io/clothing-template/signup)
-
-![image](https://github.com/pepe1113/clothing-template/blob/main/clothing-peek.gif?raw=true)
 
 ## Libraries & Referance
 
