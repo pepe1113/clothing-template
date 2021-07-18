@@ -17,79 +17,15 @@
       integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
       crossorigin="anonymous"
     />
+    <!-- loading -->
+    <link href="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.css" rel="stylesheet" />
     <title>WE AR</title>
+    <link rel="icon" href="images/logo.ico" />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
     <div class="preheader">
       <div class="preheader container-fluid bg-secondary d-flex justify-content-end">
-        <div class="dropdown bg-white">
-          <a
-            href="#"
-            class="py-2 px-4 d-block text-dark dropdown-toggle"
-            id="dropdownMenuButton"
-            data-bs-toggle="dropdown"
-            role="button"
-            aria-expanded="false"
-            >購物車(<span>1</span>)</a
-          >
-          <div class="dropdown-menu p-2" style="min-width: 300px">
-            <table class="w-100">
-              <tbody class="table">
-                <tr>
-                  <td class="me-2" style="width: 85px">
-                    <img class="img-fluid" src="images/shoppingcart-1.webp" />
-                  </td>
-                  <td>
-                    <div>春夏薄罩衫 X1</div>
-                    <div class="py-0">$890</div>
-                  </td>
-                  <td class="align-middle">
-                    <a
-                      class="text-primary"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#removeModal"
-                      data-title="春夏薄罩衫"
-                      ><i class="fas fa-trash"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="me-2" style="width: 85px">
-                    <img class="img-fluid" src="images/products-1.jpg" />
-                  </td>
-                  <td>
-                    <div>鵝黃碎花花邊衫 X1</div>
-                    <div class="py-0">$650</div>
-                  </td>
-                  <td class="align-middle">
-                    <a
-                      class="text-primary"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#removeModal"
-                      data-title="鵝黃碎花花邊衫"
-                      ><i class="fas fa-trash"></i
-                    ></a>
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="border-top" style="height: 50px">
-                  <td class="ps-2">TOTAL</td>
-                  <td colspan="2" class="text-end">$1,540</td>
-                </tr>
-              </tfoot>
-            </table>
-
-            <div class="d-flex mt-3">
-              <a href="shoppingcart.html" class="btn btn-primary flex-fill me-1">購物車</a>
-              <a href="checkout.html" class="btn btn-primary flex-fill ms-1">快速結帳</a>
-            </div>
-          </div>
-        </div>
-
         <a href="login.html" class="py-2 px-4 me-4 bg-white text-dark">登入/註冊</a>
       </div>
     </div>
@@ -187,7 +123,6 @@
               <table class="table border cart align-middle" style="min-width: 690px">
                 <thead>
                   <tr>
-                    <th style="width: 10px"></th>
                     <th style="width: 12%">商品</th>
                     <th></th>
                     <th style="width: 15%">價錢</th>
@@ -195,9 +130,8 @@
                     <th class="text-end pe-3" style="width: 15%">總金額</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="cart-checkout">
                   <tr>
-                    <td></td>
                     <td>
                       <img src="images/products-1.jpg" alt="鵝黃碎花花邊衫" class="img-fluid" />
                     </td>
@@ -222,7 +156,7 @@
         </div>
       </div>
 
-      <form class="my-4 needs-validation" novalidate>
+      <form class="my-4 needs-validation" id="checkoutForm" novalidate>
         <div class="row mb-3">
           <label for="deliveryArea" class="col-sm-2 col-form-label">配送區域</label>
           <div class="col-sm-10">
@@ -291,10 +225,7 @@
           </div>
           <div class="col-md-4">
             <label for="checkout-address2" class="form-label">區</label>
-            <select id="checkout-address2" class="form-select" required>
-              <option selected disabled value="">請選擇</option>
-              <option>...</option>
-            </select>
+            <input type="text" class="form-control" id="checkout-address2" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
           <div class="col-md-4">
@@ -302,7 +233,8 @@
             <input type="text" class="form-control" id="checkout-address3" required />
             <div class="invalid-feedback">必填項目</div>
           </div>
-          <ul class="col-12 col-md-4 ms-auto mt-md-5">
+
+          <ul class="col-12 col-md-4 ms-auto mt-md-5" id="totalForm">
             <li class="d-flex justify-content-between">
               <span>商品數量</span>
               <span>共1件</span>
@@ -313,7 +245,7 @@
             </li>
             <li class="d-flex justify-content-between">
               <span>運費</span>
-              <span>$0</span>
+              <span>$60</span>
             </li>
             <li class="d-flex justify-content-between">
               <span>應付金額</span>
@@ -323,8 +255,8 @@
 
           <div class="col-12">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" required />
-              <label class="form-check-label" for="gridCheck">
+              <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+              <label class="form-check-label" for="agreeTerms">
                 我已閱讀並明瞭<a href="#">「網站使用條款」</a>、<a href="#">「隱私權政策」</a>、<a href="#"
                   >「免責聲明」</a
                 >同意接受該等條款規定，並願遵守網站規範。
@@ -341,17 +273,18 @@
     </div>
 
     <!-- main content end -->
+
     <footer class="mt-5 pt-5 pb-2 bg-secondary">
       <div class="container text-center text-md-start">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <ul class="list-unstyled">
-              <li><a href="#">ALL</a></li>
-              <li><a href="#">NEW ARRIVALS</a></li>
-              <li><a href="#">RANKING</a></li>
-              <li><a href="#">TOPS</a></li>
-              <li><a href="#">DRESS</a></li>
-              <li><a href="#">KNITWEAR</a></li>
+              <li><a href="collections.html">ALL</a></li>
+              <li><a href="collections.html">NEW ARRIVALS</a></li>
+              <li><a href="collections.html">RANKING</a></li>
+              <li><a href="collections.html">TOPS</a></li>
+              <li><a href="collections.html">DRESS</a></li>
+              <li><a href="collections.html">KNITWEAR</a></li>
             </ul>
           </div>
           <div class="col">
@@ -381,12 +314,99 @@
         <p class="small text-center mt-5">Copyright © 2021 WANG PEIHSIN Powered by Bootstrap5</p>
       </div>
     </footer>
+    <!-- remove Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title" id="removeModalLabel">刪除鵝黃碎花花邊衫</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>確定刪除商品 <span class="text-primary" id="modal-body-productTitle">鵝黃碎花花邊衫</span> 嗎？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary flex-fill me-1" data-bs-dismiss="modal">否</button>
+            <button
+              type="button"
+              class="btn btn-primary flex-fill"
+              id="removeBtn"
+              data-bs-target="#checkRemoveModal"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+            >
+              是
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- check remove Modal -->
+    <div class="modal fade" id="checkRemoveModal" tabindex="-1" aria-labelledby="checkRemoveModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title">已刪除商品</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>已刪除商品</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary me-1" data-bs-dismiss="modal">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add to cart Modal -->
+    <div class="modal fade" id="addCartModal" tabindex="-1" aria-labelledby="addCartModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content border-0">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title">增加到購物車</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>已增加商品到購物車</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary me-1" data-bs-dismiss="modal">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- plugins cdn start -->
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- bootstrap5 -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <!-- swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- slick -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- loading -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.js"></script>
+    <!-- plugins cdn end -->
+
+    <!-- main js -->
     <script src="js/all.js"></script>
   </body>
 </html>
